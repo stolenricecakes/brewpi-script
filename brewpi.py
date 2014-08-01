@@ -752,6 +752,7 @@ while run:
                 elif line[0] == 'N':
                     pass  # version number received. Do nothing, just ignore
                 elif line[0] == 'h':
+                    logMessage("got device json(h) from arduino: |%s|\n" % line[2:])
                     deviceList['available'] = json.loads(line[2:])
                     oldListState = deviceList['listState']
                     deviceList['listState'] = oldListState.strip('h') + "h"
@@ -760,6 +761,7 @@ while run:
                         ser.setTimeout(serialRestoreTimeOut)
                         serialRestoreTimeOut = None
                 elif line[0] == 'd':
+                    logMessage("got device json(d) from arduino: |%s|\n" % line[2:])
                     deviceList['installed'] = json.loads(line[2:])
                     oldListState = deviceList['listState']
                     deviceList['listState'] = oldListState.strip('d') + "d"

@@ -123,6 +123,27 @@ def getPinList(arduinoType, shieldType):
                    {'val': 20, 'text': 'A2', 'type': 'free'},
                    {'val': 21, 'text': 'A3', 'type': 'free'},
                    {'val': 22, 'text': 'A4', 'type': 'free'}]
+    elif arduinoType == "standard" and shieldType == "diy":
+        pinList = [{'val': 12, 'text': '  12 (Cool)', 'type': 'act'},
+                   {'val': 13, 'text': '  13 (Heat)', 'type': 'act'},
+                   {'val': 18, 'text': ' A4 (OneWire)', 'type': 'onewire'},
+                   {'val': 0, 'text': ' 0', 'type': 'free'},
+                   {'val': 1, 'text': ' 1', 'type': 'free'},
+                   {'val': 2, 'text': ' 2', 'type': 'free'},
+                   {'val': 3, 'text': ' 3', 'type': 'display'},
+                   {'val': 4, ' text': '4', 'type': 'display'},
+                   {'val': 5, ' text': '5', 'type': 'display'},
+                   {'val': 6, ' text': '6', 'type': 'display'},
+                   {'val': 7, ' text': '7', 'type': 'display'},
+                   {'val': 8, ' text': '8', 'type': 'display'},
+                   {'val': 9, ' text': '9', 'type': 'display'},
+                   {'val': 10, 'text': '10', 'type': 'free'},
+                   {'val': 11, 'text': '11', 'type': 'free'},
+                   {'val': 14, 'text': 'A0', 'type': 'free'},
+                   {'val': 15, 'text': 'A1', 'type': 'free'},
+                   {'val': 16, 'text': 'A2', 'type': 'free'},
+                   {'val': 17, 'text': 'A3', 'type': 'free'},
+                   {'val': 19, 'text': 'A5', 'type': 'free'}]
     else:
         print 'Unknown Arduino or board type'
         pinList = {}
